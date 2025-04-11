@@ -15,18 +15,18 @@ app.post("/crear-link-payphone", async (req, res) => {
   try {
     const respuesta = await axios.post(
       "https://pay.payphonetodoesposible.com/api/button/Prepare",
-      {
-        amount: Math.round(monto * 100),
-        amountWithoutTax: 0,
-        amountWithTax: Math.round(monto * 100),
-        tax: 0,
-          currency: "USD",
-          clientTransactionId: pedido,
-         storeId: process.env.STORE_ID,
-          reference: `Pedido #${pedido}`,
-         responseUrl: "https://ggtoysec.com/pages/gracias-final",
-         cancelUrl: "https://ggtoysec.com/pages/gracias-final"
-      },
+     {
+  amount: Math.round(monto * 100),
+  amountWithoutTax: 0,
+  amountWithTax: Math.round(monto * 100),
+  tax: 0,
+  currency: "USD",
+  clientTransactionId: pedido,
+  storeId: process.env.STORE_ID,
+  reference: `Pedido #${pedido}`,
+  responseUrl: "https://ggtoysec.com/pages/gracias-final",
+  cancelUrl: "https://ggtoysec.com/pages/gracias-final"
+}
       {
         headers: {
           "Content-Type": "application/json",
