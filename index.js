@@ -10,7 +10,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 8080;
 
 app.post("/crear-link-payphone", async (req, res) => {
-  const { monto, pedido } = req.body;
+  const monto = parseFloat(req.body.monto) || 0; // 🔧 Nos aseguramos que sea número válido
+  const pedido = req.body.pedido || "0000";
 
   try {
     const respuesta = await axios.post(
