@@ -26,7 +26,7 @@ app.post("/crear-link-payphone", async (req, res) => {
   reference: `Pedido #${pedido}`,
   responseUrl: "https://ggtoysec.com/pages/gracias-final",
   cancelUrl: "https://ggtoysec.com/pages/gracias-final"
-}
+},
       {
         headers: {
           "Content-Type": "application/json",
