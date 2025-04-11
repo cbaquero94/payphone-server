@@ -20,7 +20,7 @@ app.post('/crear-link-payphone', async (req, res) => {
   };
 
   try {
-    const response = await axios.post('https://pay.payphonetodo.com/api/button', body, {
+    const response = await axios.post('https://pay.payphonetodo.com/api/button/Prepare', body, {
       headers: {
         Authorization: 'Bearer TU_TOKEN_AQUI',
         'Content-Type': 'application/json',
