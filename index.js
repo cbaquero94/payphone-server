@@ -13,7 +13,7 @@ app.post("/crear-link-payphone", async (req, res) => {
 
   try {
     const respuesta = await axios.post(
-      "https://pay.payphonetodo.com/api/button/v2/Confirm",
+      "https://sandbox.api.payphone.ec/api/button/Prepare",
       {
         amount: Math.round(monto * 100),
         amountWithoutTax: 0,
