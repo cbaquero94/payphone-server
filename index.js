@@ -18,8 +18,8 @@ app.post("/crear-link-payphone", async (req, res) => {
       "https://pay.payphonetodoesposible.com/api/button/Prepare",
      {
   amount: Math.round(monto * 100),
-  amountWithoutTax: 0,
   amountWithTax: Math.round(monto * 100),
+  amountWithoutTax: 0,
   tax: 0,
   currency: "USD",
   clientTransactionId: pedido,
