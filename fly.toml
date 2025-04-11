@@ -1,7 +1,8 @@
 app = "payphone-server"
+primary_region = "mia"
 
 [build]
-  image = "node:18"
+  builder = "heroku/buildpacks:20"
 
 [env]
   PORT = "3000"
