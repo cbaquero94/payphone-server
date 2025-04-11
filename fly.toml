@@ -2,7 +2,7 @@ app = "payphone-server"
 primary_region = "mia"
 
 [env]
-  PORT = "3000"
+  PORT = "8080"
 
 [[services]]
   internal_port = 8080
