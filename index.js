@@ -20,7 +20,12 @@ app.post("/crear-link-payphone", async (req, res) => {
         amountWithoutTax: 0,
         amountWithTax: Math.round(monto * 100),
         tax: 0,
-        clientTransactionId: pedido,
+          currency: "USD",
+          clientTransactionId: pedido,
+         storeId: process.env.STORE_ID,
+          reference: `Pedido #${pedido}`,
+         responseUrl: "https://ggtoysec.com/pages/gracias-final",
+         cancelUrl: "https://ggtoysec.com/pages/gracias-final"
       },
       {
         headers: {
